@@ -53,8 +53,8 @@ void loop(){
       duration_1 = pulseIn(7, HIGH); //물체에 반사되어 돌아온 초음파의 시간을 변수에 저장
       distance_1 = duration_1 * 17 / 1000;             // 초음파센서1의 거리측정
 
-      if(distance_1 < 20) {
-        analogWrite(vibe1, 120);
+      if(distance_1 < 100) {
+        analogWrite(vibe1, 130);
         Serial.print("Object detected from left side\n");
         delay(100);
       }
@@ -73,8 +73,8 @@ void loop(){
       duration_2 = pulseIn(8, HIGH);
       distance_2 = duration_2 * 17 / 1000;          // 초음파센서2의 거리측정
   
-      if(distance_2 < 20) {
-        analogWrite(vibe2, 120);
+      if(distance_2 < 100) {
+        analogWrite(vibe2, 130);
         Serial.print("Object detected from center\n");
         delay(100);
       }
@@ -92,8 +92,8 @@ void loop(){
       duration_3 = pulseIn(10, HIGH); //물체에 반사되어 돌아온 초음파의 시간을 변수에 저장
       distance_3 = duration_3 * 17 / 1000;             // 초음파센서3의 거리측정
 
-      if(distance_3 < 20) {
-        analogWrite(vibe3, 120);
+      if(distance_3 < 100) {
+        analogWrite(vibe3, 130);
         Serial.print("Object detected from right side\n");
         delay(100);
       }
@@ -112,7 +112,7 @@ void loop(){
       duration_4 = pulseIn(11, HIGH); //물체에 반사되어 돌아온 초음파의 시간을 변수에 저장
       distance_4 = duration_4 * 17 / 1000;             // 초음파센서4의 거리측정
 
-      if(distance_4 < 20) {
+      if(distance_4 < 100) {
         Serial.print("Floating object detected\n");
         for (int i = 0; i < 5; i++) {
           tone(speaker, melody[2], 20);
